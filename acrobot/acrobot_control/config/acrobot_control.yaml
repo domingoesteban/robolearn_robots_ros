@@ -1,0 +1,13 @@
+acrobot:
+  # Publish all joint states -----------------------------------
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50  
+  
+  # Position Controllers ---------------------------------------
+  joint2_effort_controller:
+    # TODO Check why there is not /acrobot/joint2_effort_controller/state with JointEffortController nor dynamic reconfigure
+    type: effort_controllers/JointEffortController
+    #type: effort_controllers/JointVelocityController
+    joint: joint2
+    pid: {p: 100.0, i: 0.01, d: 10.0}

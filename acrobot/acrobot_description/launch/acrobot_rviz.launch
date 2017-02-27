@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- Visualize acrobot in Rviz -->
+
+  <param name="robot_description"
+    command="$(find xacro)/xacro --inorder '$(find acrobot_description)/urdf/acrobot.xacro'" />
+
+  <!-- Publish joint values with GUI -->
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
+    <param name="use_gui" value="True"/>
+  </node>
+
+  <!-- Publish joint values -->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher"/>
+
+  <!-- Rviz visualization -->
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find acrobot_description)/rviz/acrobot.rviz"/>
+
+</launch>

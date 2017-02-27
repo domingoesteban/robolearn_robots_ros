@@ -8,22 +8,27 @@
 
   <license>MIT</license>
 
-  <!-- Optional attribute type can be: website, bugtracker, or repository -->
-  <!-- <url type="website">http://wiki.ros.org/acrobot_description</url> -->
+  <url type="repository">https://github.com/domingoesteban/robolearn_robots</url>
 
   <!-- Dependencies (catkin packages or system dependencies) -->
   <!-- Required packages at compile time: -->
   <!--   <build_depend>message_generation</build_depend> -->
+
   <!-- Build tool packages: -->
   <buildtool_depend>catkin</buildtool_depend>
+
   <!-- Required packages at runtime: -->
-  <!--   <run_depend>message_runtime</run_depend> -->
+  <run_depend>controller_manager</run_depend>
+  <run_depend>joint_state_controller</run_depend>
+  <run_depend>robot_state_publisher</run_depend>
+  <run_depend>effort_controllers</run_depend>
+  <run_depend>rqt_gui</run_depend>
+
   <!-- Required packages for testing: -->
   <!--   <test_depend>gtest</test_depend> -->
 
 
   <export>
     <!-- Other tools can request additional information be placed here -->
-
   </export>
 </package>

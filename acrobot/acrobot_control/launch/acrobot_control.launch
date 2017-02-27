@@ -1,0 +1,17 @@
+<launch>
+
+  <!-- Load joint controller configurations to ROS parameter server -->
+  <rosparam file="$(find acrobot_control)/config/acrobot_control.yaml" command="load"/>
+
+  <!-- Load controllers -->
+  <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
+	output="screen" ns="/acrobot" args="joint_state_controller
+					  joint2_effort_controller"/>
+
+  <!-- TF transformations-->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"
+	respawn="false" output="screen">
+    <remap from="/joint_states" to="/acrobot/joint_states" />
+  </node>
+
+</launch>
