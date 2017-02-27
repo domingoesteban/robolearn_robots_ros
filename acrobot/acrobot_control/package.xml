@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<package>
+  <name>acrobot_control</name>
+  <version>0.0.0</version>
+  <description>The acrobot_control package</description>
+
+  <maintainer email="domingo.esteban@iit.it">Domingo Esteban</maintainer>
+
+  <license>MIT</license>
+
+  <!-- Optional attribute type can be: website, bugtracker, or repository -->
+  <!-- <url type="website">http://wiki.ros.org/acrobot_description</url> -->
+
+  <!-- Dependencies (catkin packages or system dependencies) -->
+  <!-- Required packages at compile time: -->
+  <!--   <build_depend>message_generation</build_depend> -->
+  <!-- Build tool packages: -->
+  <buildtool_depend>catkin</buildtool_depend>
+  <!-- Required packages at runtime: -->
+  <!--   <run_depend>message_runtime</run_depend> -->
+  <!-- Required packages for testing: -->
+  <!--   <test_depend>gtest</test_depend> -->
+
+
+  <export>
+    <!-- Other tools can request additional information be placed here -->
+
+  </export>
+</package>
