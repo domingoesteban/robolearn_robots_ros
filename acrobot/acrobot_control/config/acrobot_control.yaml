@@ -9,5 +9,6 @@ acrobot:
     # TODO Check why there is not /acrobot/joint2_effort_controller/state with JointEffortController nor dynamic reconfigure
     type: effort_controllers/JointEffortController
     #type: effort_controllers/JointVelocityController
+    #type: effort_controllers/JointPositionController
     joint: joint2
     pid: {p: 100.0, i: 0.01, d: 10.0}
