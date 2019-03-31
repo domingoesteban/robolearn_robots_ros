@@ -4,7 +4,8 @@
 
 ## Robots:
 - acrobot
-- manipulator2d
+- planar2dof
+- planar3dof
 
 ## ROS launch files
 Visualization in Rviz:
